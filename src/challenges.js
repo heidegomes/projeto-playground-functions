@@ -44,9 +44,11 @@ function highestCount(numeros) {
   let contNumero = 0;
   for (let i = 0; i < numeros.length; i += 1) {
     let verificaNumero = numeros[i];
+    console.log(verificaNumero);
     for (let j = 1; j < numeros.length; j += 1) {
       if (verificaNumero === numeros[j]) {
         contNumero += 1;
+        console.log(contNumero);
       }
     }
   }
@@ -58,26 +60,31 @@ function highestCount(numeros) {
 }
 console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
-// Desafio 7 *
+// Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
-  if ( )
+  if ((cat1 - mouse) < (cat2 - mouse)) {
+    return ('cat1');
+  } if ((cat1 - mouse) > (cat2 - mouse)) {
+    return ('cat2');
+  } if (cat1 === cat2) {
+    return ('Os gatos trombam e o rato foge');
+  }
 }
 
 // Desafio 8 *
 function fizzBuzz(numeros) {
   // seu código aqui
-let string = []
+  let string = [];
   for (let index = 0; index < numeros.length; index++) {
-    if (index % 3 == 0){
+    if (index % 3 == 0) {
       return ('fizz');
-    } else if (index % 5 == 0){
+    } if (index % 5 == 0) {
       return ('buzz');
-    } else if (index % 3 == 0 && index % 5 == 0){
+    } if (index % 3 == 0 && index % 5 == 0) {
       return ('fizzBuzz');
-    } else {
-      return ('bug!')
     }
+    return ('bug!');
   }
   return (string);
 }
@@ -90,32 +97,36 @@ function encode(string) {
   for (let i = 0; i < string.length; i++) {
     let character = string[i];
     switch (character) {
-      case 'a':
-        string.replace (1);
-      case 'e':
-        string.replace (2);
-      case 'i':
-        string.replace (3);
-      case 'o':
-        string.replace (4);
-      case 'u':
-        string.replace (5);
-      default:
-        // newString.push (string[i]);
-        break;
+    case 'a':
+      string.replace(1);
+    case 'e':
+      string.replace(2);
+    case 'i':
+      string.replace(3);
+    case 'o':
+      string.replace(4);
+    case 'u':
+      string.replace(5);
+    default:
+      // newString.push (string[i]);
+      break;
     }
     return string;
   }
 }
-console.log(encode ('hi there!'));
+console.log(encode('hi there!'));
 
 function decode() {
   // seu código aqui
 }
 
 // Desafio 10
-function techList() {
+function techList(lista, nome) {
   // seu código aqui
+  let objetos = [];
+
+  objetos.tech.push;
+  objetos.name.push;
 }
 
 module.exports = {
