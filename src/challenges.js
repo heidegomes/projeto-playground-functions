@@ -66,7 +66,7 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 }
 
-// Desafio 8 *
+// Desafio 8
 function fizzBuzz(numeros) {
   // seu código aqui
   let arrRet = [];
@@ -99,7 +99,7 @@ function decode() {
   // seu código aqui
 }
 
-// Desafio 10*
+// Desafio 10
 function techList(lista, nome) {
   // seu código aqui
   let arrRet = [];
@@ -118,8 +118,6 @@ function techList(lista, nome) {
 
   return arrRet;
 }
-
-console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Lucas'));
 
 module.exports = {
   calcArea,
