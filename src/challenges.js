@@ -37,28 +37,23 @@ function footballPoints(wins, ties) {
   return (numberOfPoints);
 }
 
-// Desafio 6 *
+// Desafio 6
 function highestCount(numeros) {
   // seu código aqui
-  let contRepetido = 0;
-  let contNumero = 0;
-  for (let i = 0; i < numeros.length; i += 1) {
-    let verificaNumero = numeros[i];
-    console.log(verificaNumero);
-    for (let j = 1; j < numeros.length; j += 1) {
-      if (verificaNumero === numeros[j]) {
-        contNumero += 1;
-        console.log(contNumero);
-      }
+  let maiorNumero = numeros[0];
+  let countMaiorNumero = 1;
+  for (let i = 1; i < numeros.length; i += 1) {
+    let numeroAtual = numeros[i];
+    if (numeroAtual > maiorNumero) {
+      maiorNumero = numeroAtual;
+      countMaiorNumero = 1;
+    } else if (numeroAtual === maiorNumero) {
+      countMaiorNumero += 1;
     }
   }
-  if (contNumero > contRepetido) {
-    contRepetido = contNumero;
-  }
-  contNumero = 0;
-  return numeros[contRepetido];
+  return countMaiorNumero;
 }
-console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
+console.log(highestCount([0, 0, 0]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -75,44 +70,30 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8 *
 function fizzBuzz(numeros) {
   // seu código aqui
-  let string = [];
+  let arrRet = [];
   for (let index = 0; index < numeros.length; index++) {
-    if (index % 3 == 0) {
-      return ('fizz');
-    } if (index % 5 == 0) {
-      return ('buzz');
-    } if (index % 3 == 0 && index % 5 == 0) {
-      return ('fizzBuzz');
+    let valor = numeros[index]
+    if (valor % 3 == 0 && valor % 5 == 0) {
+      arrRet.push ('fizzBuzz');
+    } else if (valor % 5 == 0) {
+      arrRet.push ('buzz');
+    } else if (valor % 3 == 0) {
+      arrRet.push ('fizz');
+    } else {
+      arrRet.push ('bug!');
     }
-    return ('bug!');
   }
-  return (string);
+  return arrRet;
 }
-// console.log(fizzBuzz([2, 15, 7, 9, 45]))
+console.log(fizzBuzz([2, 15, 7, 9, 45]))
 
 // Desafio 9 *
-function encode(string) {
+function encode(frase) {
   // seu código aqui
-  // let newString = ' ';
-  for (let i = 0; i < string.length; i++) {
-    let character = string[i];
-    switch (character) {
-    case 'a':
-      string.replace(1);
-    case 'e':
-      string.replace(2);
-    case 'i':
-      string.replace(3);
-    case 'o':
-      string.replace(4);
-    case 'u':
-      string.replace(5);
-    default:
-      // newString.push (string[i]);
-      break;
-    }
-    return string;
-  }
+  let arrayLetras = frase.split('');
+  console.log(arrayLetras);
+
+  return arrayLetras;
 }
 console.log(encode('hi there!'));
 
@@ -120,14 +101,27 @@ function decode() {
   // seu código aqui
 }
 
-// Desafio 10
+// Desafio 10*
 function techList(lista, nome) {
   // seu código aqui
-  let objetos = [];
+  let arrRet = [];
 
-  objetos.tech.push;
-  objetos.name.push;
+  if (lista.length === 0) {
+    return 'Vazio!';
+  }
+  lista.sort();
+  for (let index = 0; index < lista.length; index += 1) {
+    let obj = {
+      tech: lista[index],
+      name: nome,
+    };
+    arrRet.push(obj);
+  }
+
+  return arrRet;
 }
+
+console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Lucas'));
 
 module.exports = {
   calcArea,
