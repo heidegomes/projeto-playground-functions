@@ -110,7 +110,6 @@ function encode(frase) {
   }
   return arrayLetras.join('');
 }
-console.log(encode('hi there!'));
 
 function decode(frase) {
   // seu código aqui
@@ -136,8 +135,6 @@ function decode(frase) {
   }
   return arrayLetras.join('');
 }
-console.log(decode('h3 th2r2!'));
-
 
 // Desafio 10
 function techList(lista, nome) {
