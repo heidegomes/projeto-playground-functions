@@ -53,7 +53,6 @@ function highestCount(numeros) {
   }
   return countMaiorNumero;
 }
-console.log(highestCount([0, 0, 0]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -85,7 +84,6 @@ function fizzBuzz(numeros) {
   }
   return arrRet;
 }
-console.log(fizzBuzz([2, 15, 7, 9, 45]))
 
 // Desafio 9 *
 function encode(frase) {
