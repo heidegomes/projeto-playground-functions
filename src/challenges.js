@@ -73,31 +73,71 @@ function fizzBuzz(numeros) {
   for (let index = 0; index < numeros.length; index++) {
     let valor = numeros[index]
     if (valor % 3 == 0 && valor % 5 == 0) {
-      arrRet.push ('fizzBuzz');
+      arrRet.push('fizzBuzz');
     } else if (valor % 5 == 0) {
-      arrRet.push ('buzz');
+      arrRet.push('buzz');
     } else if (valor % 3 == 0) {
-      arrRet.push ('fizz');
+      arrRet.push('fizz');
     } else {
-      arrRet.push ('bug!');
+      arrRet.push('bug!');
     }
   }
   return arrRet;
 }
 
-// Desafio 9 *
+// Desafio 9
 function encode(frase) {
   // seu código aqui
   let arrayLetras = frase.split('');
-  console.log(arrayLetras);
-
-  return arrayLetras;
+  for (let i = 0; i < arrayLetras.length; i += 1) {
+    switch (arrayLetras[i]) {
+    case 'a':
+      arrayLetras[i] = 1;
+      break;
+    case 'e':
+      arrayLetras[i] = 2;
+      break;
+    case 'i':
+      arrayLetras[i] = 3;
+      break;
+    case 'o':
+      arrayLetras[i] = 4;
+      break;
+    case 'u':
+      arrayLetras[i] = 5;
+      break;
+    }
+  }
+  return arrayLetras.join('');
 }
 console.log(encode('hi there!'));
 
-function decode() {
+function decode(frase) {
   // seu código aqui
+  let arrayLetras = frase.split('');
+  for (let i = 0; i < arrayLetras.length; i += 1) {
+    switch (arrayLetras[i]) {
+    case '1':
+      arrayLetras[i] = 'a';
+      break;
+    case '2':
+      arrayLetras[i] = 'e';
+      break;
+    case '3':
+      arrayLetras[i] = 'i';
+      break;
+    case '4':
+      arrayLetras[i] = 'o';
+      break;
+    case '5':
+      arrayLetras[i] = 'u';
+      break;
+    }
+  }
+  return arrayLetras.join('');
 }
+console.log(decode('h3 th2r2!'));
+
 
 // Desafio 10
 function techList(lista, nome) {
